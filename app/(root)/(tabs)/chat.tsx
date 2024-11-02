@@ -1,7 +1,8 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { router } from "expo-router";
+import { router, Link } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 const Chat = () => {
   return (
@@ -16,6 +17,10 @@ const Chat = () => {
         >
           <Ionicons name="add" size={24} color="black" />
         </TouchableOpacity>
+        <Link href={`/(root)/heartrate`} style={{display:"flex", alignContent:"center", alignItems:"center"}}>
+          <MaterialCommunityIcons name="heart" size={24} color="red" />
+          <Text>Heart Rate</Text>
+        </Link>
       </View>
     </SafeAreaView>
   );
